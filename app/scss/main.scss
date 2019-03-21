@@ -3,6 +3,7 @@
 1.  Fonts including
 2.  General styles
 3.  Header
+4.  Work zone
 
 */
 
@@ -22,10 +23,17 @@
 }
 
 @font-face {
-    font-family: "Open-Sans-Bold";
+    font-family: "Open-Sans-SemiBold";
     font-style: normal;
     font-weight: bold;
     src: url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Open-Sans-Bold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/OpenSans-Bold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold/OpenSans-Bold.ttf") format("truetype");
 }
 
 /* 2. General styles */
@@ -33,8 +41,10 @@ $padding-standart: 150px 0px;
 $padding-small: 80px 0px;
 $typography-color-standart: 16px;
 $dark: #212121;
-$gold: #ffe5db;
 $white: #fff;
+$dark-blue: #1d1f2e;
+$light-blue: #2a2d40;
+$blue: #347ffb;
 
 body {
     color: #787878;
@@ -48,289 +58,96 @@ body {
 section {
     padding: $padding-standart;
     text-align: center;
+
+    @media only screen and (max-device-width: 991px) {
+        padding: $padding-small;
+    }
 }
 
-h2{
-	font-size: 2rem;
+a{
+    font-size: 16px;
+    letter-spacing: 0px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+h1{
+	font-size: 42px;
+}
+
+.colorisso{
+    height: 2000px;
+}
+
+.parallax-mirror{
+    z-index: 0!important;
+}
 
 /* 3. Header */
-header {
-    background-color: $dark;
+header{
+    padding: 15px 0 20px 0; 
+    background-color: $dark-blue;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $white;
+
+    .logo-box{
+
+        a{
+            color: $white;
+            font-family: "Open-Sans-Regular", sans-serif, Arial;
+            font-size: 22px;
+
+            .logo-box{
+                float: left;
+
+                img{
+                    max-width: 60px;
+                    margin-right: 10px;
+                }
+
+            }
+
+            .name-box{
+                padding-top: 10px;
+
+                p{
+                    line-height: 20px;
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                }
+
+                .top-string{
+                    font-size: 42px;
+                    letter-spacing: -4px;
+                    padding-top: 7px;
+                }
+
+                .bottom-string{
+                    letter-spacing: 0px;
+                    font-size: 16px;
+                    padding-top: 4px;
+                    font-family: "Open-Sans-Bold", sans-serif, Arial;
+                }
+            }
+        }
+    }
+}
+
+/* 4. Work zone */
+.main_head {
+    background-color: $dark-blue;
     height: auto;
-    padding: 20px 0;
+    height: 100%;
 
-    @media only screen and (max-device-width: 575px) {
-        padding: 20px 0 10px;
-    }
-
-    .top-bar {
-        padding-bottom: 20px;
-
-        @media only screen and (max-device-width: 991px) {
-            padding-bottom: 5px;
-        }
-
-        .logo-box {
-            margin-top: -5px;
-
-            img {
-                max-width: 100%;
-
-                @media only screen and (max-device-width: 575px) {
-                    margin-top: 10px;
-                }
-            }
-        }
-
-        .social-icons-box {
-            margin-top: -5px;
-
-
-            a {
-                margin-right: 10px;
-            }
-
-            a:last-child {
-                margin-right: 0px;
-            }
-
-            i {
-                color: $white;
-                font-size: 1.5rem;
-                transition: .2s;
-            }
-
-            i:hover {
-                color: $gold;
-            }
-
-            .wrapper-info {
-                float: right;
-                color: $white;
-                font-size: 12px;
-                letter-spacing: 0;
-
-                .status-box {
-                    float: left;
-                    z-index: 999;
-
-                    margin-right: 50px;
-
-                    @media only screen and (max-device-width: 1199px) {
-                        margin-right: 10px;
-                    }
-
-
-                    a {
-                        padding: 10px 25px;
-                        background-color: $white;
-                        color: $dark;
-                        display: block;
-                        border-radius: 30px;
-                        box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.3);
-                        transition: .2s;
-
-                        @media only screen and (max-device-width: 575px) {
-                            margin-top: 6px;
-                            padding: 10px 15px;
-                        }
-                    }
-
-                    a:hover {
-                        text-decoration: none;
-                        box-shadow: none;
-                    }
-
-                    .pop-up-box {
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(36, 36, 36, 0.99);
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        z-index: 9999;
-                        text-align: center;
-                        padding-top: 10%;
-                        display: none;
-                        overflow: hidden;
-
-                        @media only screen and (max-device-width: 575px) {
-                            padding-top: 70px;
-                        }
-
-                        .widget-layout{
-                            @media only screen and (max-device-width: 575px) {
-                                max-width: 300px;
-                                overflow: hidden;
-                                margin: 0 auto;
-                            }
-                        }
-
-                        .close-box {
-                            width: 40px;
-                            height: 40px;
-                            padding: 0;
-                            background-color: transparent;
-                            color: $white;
-                            font-size: 25px;
-                            position: fixed;
-                            top: 10px;
-                            right: 10px;
-                            cursor: pointer;
-
-                            @media only screen and (max-device-width: 575px) {
-                                top: 5px;
-                                right: 5px;
-                            }
-                        }
-
-                        .close-box:hover {
-                            box-shadow: none;
-                        }
-                    }
-                }
-
-                @media only screen and (max-device-width: 991px) {
-                    float: left;
-                }
-
-                @media only screen and (max-device-width: 767px) {
-                    font-size: 10px;
-                }
-
-                .adress {
-                    i {
-                        font-size: 14px;
-                        margin-right: 2px;
-                    }
-                }
-
-                .left-box,
-                .right-box {
-                    float: left;
-                }
-
-                .left-box {
-                    margin-right: 50px;
-
-                    @media only screen and (max-device-width: 991px) {
-                        margin-right: 10px;
-                    }
-
-                    @media only screen and (max-device-width: 767px) {
-                        display: none;
-                    }
-
-
-                    .work-time {
-
-                        padding-left: 12px;
-
-                        i {
-                            font-size: 13px;
-                            margin-left: -13px;
-                        }
-                    }
-                }
-
-                .right-box {
-                    @media only screen and (max-device-width: 767px) {
-                        display: none;
-                    }
-
-                    .phone-box {
-                        margin-left: 18px;
-
-                        @media only screen and (max-device-width: 575px) {
-                            margin-left: 0px;
-                        }
-
-                        @media only screen and (max-device-width: 320px) {
-                            margin-top: -7px;
-                        }
-
-                        i {
-                            font-size: 12px;
-                            margin-left: -13px;
-
-                            @media only screen and (max-device-width: 575px) {
-                                display: none;
-                            }
-                        }
-
-                        a {
-                            color: $white;
-                            transition: .2s;
-
-                            @media only screen and (max-device-width: 575px) {
-                                font-size: 12px;
-                            }
-                        }
-
-                        a:hover {
-                            color: $gold;
-                        }
-                    }
-                }
-            }
-        }
-
-        .social-icons-box.media {
-            @media only screen and (max-device-width: 991px) {
-                display: none;
-            }
-        }
-    }
-
-    .nav-box {
-
-        nav.horizontal {
-            text-align: center;
-
-            @media only screen and (max-device-width: 991px) {
-                display: none;
-            }
-
-            ul {
-                padding: 0;
-            }
-
-            li {
-                list-style: none;
-                display: inline-block;
-                margin-right: 75px;
-
-                @media only screen and (max-device-width: 1199px) {
-                    margin-right: 40px;
-                }
-            }
-
-            li:last-child {
-                margin-right: 0px;
-            }
-
-            a {
-                color: $white;
-
-                transition: .2s;
-                font-family: "Open-Sans-Bold", sans-serif, Arial;
-                font-weight: bold;
-            }
-
-            a:hover {
-                text-decoration: none;
-                color: $gold;
-                border-bottom: solid 1px $gold;
-            }
-
-            li.current-menu-item a {
-                text-decoration: none;
-                color: $gold;
-                border-bottom: solid 1px $gold;
-            }
-        }
+    .menu-box{
+        background-color: $white;
+        width: 100%;
+        height: 60px;
     }
 
     /* Mobile navigation */
@@ -529,74 +346,6 @@ header {
 
             a:hover {
                 text-decoration: none;
-            }
-        }
-
-        .more-info-box {
-            -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-            margin-top: 20px;
-
-            i {
-                color: $white;
-            }
-
-            color: $white;
-            text-align: center;
-
-            .phone-box {
-                margin-left: 18px;
-                margin-bottom: 10px;
-
-                @media only screen and (max-device-width: 575px) {
-                    margin-left: 0px;
-                }
-
-                @media only screen and (max-device-width: 320px) {
-                    margin-top: -7px;
-                }
-
-                i {
-                    font-size: 12px;
-                    margin-left: -13px;
-
-                    @media only screen and (max-device-width: 575px) {
-                        display: none;
-                    }
-                }
-
-                a {
-                    color: $white;
-                    transition: .2s;
-
-                    @media only screen and (max-device-width: 575px) {
-                        font-size: 12px;
-                    }
-                }
-
-                a:hover {
-                    color: $gold;
-                }
-            }
-
-            .work-time {
-                font-size: 12px;
-            }
-
-            .social-box {
-                margin-bottom: 15px;
-
-                i {
-                    font-size: 22px;
-                }
-
-                a i {
-                    margin-right: 10px;
-                }
-
-                a:last-child i {
-                    margin-right: 0px;
-                }
             }
         }
     }
