@@ -4,6 +4,7 @@
 2.  General styles
 3.  Header
 4.  Work zone
+5.  Why-us
 
 */
 
@@ -95,6 +96,7 @@ header {
     left: 0;
     color: $white;
     border-bottom: 1px solid #414457;
+    z-index: 99;
 
     .logo-box {
 
@@ -372,8 +374,6 @@ header {
                     top: 0;
                 }
 
-
-
                 span {
                     display: block;
                 }
@@ -560,7 +560,12 @@ header {
 .main_head {
     background-color: $dark-blue;
     height: auto;
+    background: url(../img/background.jpg) center 0 repeat fixed; 
     height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
 
     .menu-box {
         background-color: $white;
@@ -768,3 +773,103 @@ header {
         }
     }
 }
+
+/* 4.  Work zone */
+.main_head {
+    padding: 260px 0;
+
+    .form-box {
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            color: $white;
+            border-bottom: solid 1px #414457;
+            transition: .5s;
+
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: solid 1px $blue;
+            }
+        }
+    }
+
+    input::-webkit-input-placeholder {
+        color: $blue;
+    } 
+    
+    input::-moz-placeholder {
+        color: $blue;
+    }
+
+    input {
+        width: 48%;
+
+        &:nth-child(1+n){
+            margin-right: 2%;
+        }
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    span.wpcf7-form-control-wrap:first-child input{
+        margin-right: 3%;
+    }
+
+    input.wpcf7-submit {
+        width: 200px;
+        padding: 15px 30px;
+        border-radius: 30px;
+        background-color: $blue;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+/* 5.  Why-us */
+.why-us {
+    background: #171a37;
+    background: linear-gradient(180deg,#171a37 0,#3e293d);
+    color: $white;
+    
+    .item-box{
+
+        .box-wrapper {
+            background: #3c3f5c url(../img/texture.png) bottom repeat-x;
+            padding: 100px 30px 80px 30px;
+            transition: .5s;
+            cursor: pointer;
+
+            h2{
+                margin-bottom: 20px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+
+            &:hover{
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+                margin-top: -5px;
+                border-bottom: 2px solid $white;
+            }
+
+            .icon-box{
+                margin-bottom: 40px;
+
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+

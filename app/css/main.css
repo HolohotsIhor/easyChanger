@@ -4,6 +4,7 @@
 2.  General styles
 3.  Header
 4.  Work zone
+5.  Why-us
 
 */
 /* 1. Fonts including */
@@ -72,7 +73,8 @@ header {
   top: 0;
   left: 0;
   color: #fff;
-  border-bottom: 1px solid #414457; }
+  border-bottom: 1px solid #414457;
+  z-index: 99; }
   header .logo-box a {
     color: #fff;
     font-family: "Open-Sans-Regular", sans-serif, Arial;
@@ -423,7 +425,12 @@ header {
 .main_head {
   background-color: #1d1f2e;
   height: auto;
+  background: url(../img/background.jpg) center 0 repeat fixed;
   height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
   /* Mobile navigation */ }
   .main_head .menu-box {
     background-color: #fff;
@@ -587,3 +594,74 @@ header {
             background-color: rgba(0, 123, 255, 0.08); }
       .main_head .top_mnu ul a:hover {
         text-decoration: none; }
+
+/* 4.  Work zone */
+.main_head {
+  padding: 260px 0; }
+  .main_head .form-box input,
+  .main_head .form-box textarea {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: solid 1px #414457;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .main_head .form-box input:active, .main_head .form-box input:focus,
+    .main_head .form-box textarea:active,
+    .main_head .form-box textarea:focus {
+      outline: none;
+      border-bottom: solid 1px #347ffb; }
+  .main_head input::-webkit-input-placeholder {
+    color: #347ffb; }
+  .main_head input::-moz-placeholder {
+    color: #347ffb; }
+  .main_head input {
+    width: 48%; }
+    .main_head input:nth-child(1 + n) {
+      margin-right: 2%; }
+  .main_head textarea {
+    width: 100%; }
+  .main_head span.wpcf7-form-control-wrap:first-child input {
+    margin-right: 3%; }
+  .main_head input.wpcf7-submit {
+    width: 200px;
+    padding: 15px 30px;
+    -webkit-border-radius: 30px;
+            border-radius: 30px;
+    background-color: #347ffb;
+    cursor: pointer;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
+    .main_head input.wpcf7-submit:hover {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+
+/* 5.  Why-us */
+.why-us {
+  background: #171a37;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #171a37), to(#3e293d));
+  background: -webkit-linear-gradient(top, #171a37 0, #3e293d);
+  background: -o-linear-gradient(top, #171a37 0, #3e293d);
+  background: linear-gradient(180deg, #171a37 0, #3e293d);
+  color: #fff; }
+  .why-us .item-box .box-wrapper {
+    background: #3c3f5c url(../img/texture.png) bottom repeat-x;
+    padding: 100px 30px 80px 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    cursor: pointer; }
+    .why-us .item-box .box-wrapper h2 {
+      margin-bottom: 20px; }
+    .why-us .item-box .box-wrapper p {
+      font-size: 14px; }
+    .why-us .item-box .box-wrapper:hover {
+      -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+      margin-top: -5px;
+      border-bottom: 2px solid #fff; }
+    .why-us .item-box .box-wrapper .icon-box {
+      margin-bottom: 40px; }
+      .why-us .item-box .box-wrapper .icon-box i {
+        font-size: 40px; }

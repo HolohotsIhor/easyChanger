@@ -24,12 +24,5 @@ $(document).ready(function() {
         };
     });
 
-    /* Header resize. Height: 100% for ever */
-    function heightDetect() {
-        $(".main_head").css("height", $(window).height());
-    };
-    heightDetect();
-    $(window).resize(function() {
-        heightDetect();
-    });
+ 
 });
