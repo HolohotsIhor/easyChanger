@@ -7,7 +7,8 @@
 5.  Why-us
 6.  Clients
 7.  Counter
-8. Footer
+8.  Static content
+9. Footer
 
 */
 
@@ -649,7 +650,6 @@ header {
     max-width: 1920px;
     position: relative;
 
-
     .menu-box {
         background-color: $white;
         width: 100%;
@@ -866,12 +866,11 @@ header {
         padding-top: 200px;
     }
 
-
-
     .form-box {
 
         input,
-        textarea {
+        textarea,
+        select {
             background-color: transparent;
             border: none;
             color: $white;
@@ -881,25 +880,45 @@ header {
             &:active,
             &:focus {
                 outline: none;
-                border-bottom: solid 2px $blue;
+                border-bottom: solid 2px $blue;   
             }
+        }
+    }
+
+    select {
+        margin-top: 2px;
+        cursor: pointer;
+
+        option {
+            color: $white;
+            background-color: #1d1f2e;
+            border: solid 1px #414457;
+            cursor: pointer;
         }
     }
 
     input::-webkit-input-placeholder {
         color: #a9b3d1;
+        font-family: "Open-Sans-Light", sans-serif, Arial;
+        font-size: 14px;
     }
 
     input::-moz-placeholder {
         color: #a9b3d1;
+        font-family: "Open-Sans-Light", sans-serif, Arial;
+        font-size: 14px;
     }
 
     textarea::-webkit-input-placeholder {
         color: #a9b3d1;
+        font-family: "Open-Sans-Light", sans-serif, Arial;
+        font-size: 14px;
     }
 
     textarea::-moz-placeholder {
         color: #a9b3d1;
+        font-family: "Open-Sans-Light", sans-serif, Arial;
+        font-size: 14px;
     }
 
     input {
@@ -910,9 +929,6 @@ header {
         }
     }
 
-    textarea {
-        width: 100%;
-    }
 
     span.wpcf7-form-control-wrap:first-child input {
         margin-right: 3%;
@@ -929,6 +945,105 @@ header {
         &:hover {
             box-shadow: none;
         }
+    }
+
+    .crypto-type-box {
+        width: 45%;
+        margin-right: 10%;
+        margin-bottom: 25px;
+        float: left;
+
+        @media only screen and (max-device-width: 991px) {
+            width: 48%;
+            margin-right: 4%;
+        }
+
+        @media only screen and (max-device-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        br {
+            display: none;
+        }
+
+        .wpcf7-form-control-wrap:first-child {
+            width: 80%;
+            float: left;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .wpcf7-form-control-wrap:last-child {
+            width: 20%;
+            float: left;
+
+            select {
+                width: 100%;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+
+    .info-group {
+        float: left;
+        width: 100%;
+        br{
+            display: none;
+        }
+
+        .wpcf7-form-control-wrap {
+            width: 45%;
+            margin-right: 10%;
+            margin-bottom: 25px;
+            float: left;
+
+            @media only screen and (max-device-width: 991px) {
+                width: 48%;
+                margin-right: 4%;
+            }
+
+            @media only screen and (max-device-width: 767px) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+
+            input{
+                width: 100%;
+            }
+        }
+    }
+
+    .info-group-comment{
+        width: 100%;
+        float: left;
+        margin-bottom: 30px;
+
+        textarea{
+            width: 100%;
+
+            @media only screen and (max-device-width: 991px) {
+                height: 150px;
+            }
+        }
+    }
+
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+        border: 2px solid $blue;
+        border-radius: 30px;
+    }
+
+    span.wpcf7-not-valid-tip{
+        font-size: 12px;
     }
 }
 
@@ -975,7 +1090,6 @@ header {
             &:hover {
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
                 margin-top: -5px;
-                border-bottom: 2px solid #212121;
             }
 
             .icon-box {
@@ -1049,7 +1163,6 @@ header {
 
                 span {
                     font-family: "Open-Sans-Bold", sans-serif, Arial;
-
                 }
             }
 
@@ -1151,7 +1264,31 @@ header {
 }
 
 /* 8. Footer */
-footer{
+.static-content{
+    padding-bottom: 0;
+
+    .text-box{
+        background-color: $white;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        margin-top: -270px;
+        border-radius: 5px 5px 0 0;
+        padding: 80px 60px;
+
+        h1{
+            color: #1d1f2e;
+        }
+
+        p{
+            font-family: "Open-Sans-Light", sans-serif, Arial;
+            color: #1d1f2e;
+            line-height: 30px;
+            font-size: 15px;
+        }
+    }
+}
+
+/* 9. Footer */
+footer {
     padding: 30px 0 15px 0;
     background-color: #212121;
     text-align: center;

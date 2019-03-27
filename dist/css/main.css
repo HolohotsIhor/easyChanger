@@ -7,7 +7,8 @@
 5.  Why-us
 6.  Clients
 7.  Counter
-8. Footer
+8.  Static content
+9. Footer
 
 */
 /* 1. Fonts including */
@@ -668,7 +669,8 @@ header {
       padding: 80px 0px;
       padding-top: 200px; } }
   .main_head .form-box input,
-  .main_head .form-box textarea {
+  .main_head .form-box textarea,
+  .main_head .form-box select {
     background-color: transparent;
     border: none;
     color: #fff;
@@ -678,23 +680,39 @@ header {
     transition: .5s; }
     .main_head .form-box input:active, .main_head .form-box input:focus,
     .main_head .form-box textarea:active,
-    .main_head .form-box textarea:focus {
+    .main_head .form-box textarea:focus,
+    .main_head .form-box select:active,
+    .main_head .form-box select:focus {
       outline: none;
       border-bottom: solid 2px #347ffb; }
+  .main_head select {
+    margin-top: 2px;
+    cursor: pointer; }
+    .main_head select option {
+      color: #fff;
+      background-color: #1d1f2e;
+      border: solid 1px #414457;
+      cursor: pointer; }
   .main_head input::-webkit-input-placeholder {
-    color: #a9b3d1; }
+    color: #a9b3d1;
+    font-family: "Open-Sans-Light", sans-serif, Arial;
+    font-size: 14px; }
   .main_head input::-moz-placeholder {
-    color: #a9b3d1; }
+    color: #a9b3d1;
+    font-family: "Open-Sans-Light", sans-serif, Arial;
+    font-size: 14px; }
   .main_head textarea::-webkit-input-placeholder {
-    color: #a9b3d1; }
+    color: #a9b3d1;
+    font-family: "Open-Sans-Light", sans-serif, Arial;
+    font-size: 14px; }
   .main_head textarea::-moz-placeholder {
-    color: #a9b3d1; }
+    color: #a9b3d1;
+    font-family: "Open-Sans-Light", sans-serif, Arial;
+    font-size: 14px; }
   .main_head input {
     width: 48%; }
     .main_head input:nth-child(1 + n) {
       margin-right: 2%; }
-  .main_head textarea {
-    width: 100%; }
   .main_head span.wpcf7-form-control-wrap:first-child input {
     margin-right: 3%; }
   .main_head input.wpcf7-submit {
@@ -709,6 +727,70 @@ header {
     .main_head input.wpcf7-submit:hover {
       -webkit-box-shadow: none;
               box-shadow: none; }
+  .main_head .crypto-type-box {
+    width: 45%;
+    margin-right: 10%;
+    margin-bottom: 25px;
+    float: left; }
+    @media only screen and (max-device-width: 991px) {
+      .main_head .crypto-type-box {
+        width: 48%;
+        margin-right: 4%; } }
+    @media only screen and (max-device-width: 767px) {
+      .main_head .crypto-type-box {
+        width: 100%;
+        margin-right: 0; } }
+    .main_head .crypto-type-box br {
+      display: none; }
+    .main_head .crypto-type-box .wpcf7-form-control-wrap:first-child {
+      width: 80%;
+      float: left; }
+      .main_head .crypto-type-box .wpcf7-form-control-wrap:first-child input {
+        width: 100%; }
+    .main_head .crypto-type-box .wpcf7-form-control-wrap:last-child {
+      width: 20%;
+      float: left; }
+      .main_head .crypto-type-box .wpcf7-form-control-wrap:last-child select {
+        width: 100%; }
+    .main_head .crypto-type-box:nth-child(3) {
+      margin-right: 0; }
+  .main_head .info-group {
+    float: left;
+    width: 100%; }
+    .main_head .info-group br {
+      display: none; }
+    .main_head .info-group .wpcf7-form-control-wrap {
+      width: 45%;
+      margin-right: 10%;
+      margin-bottom: 25px;
+      float: left; }
+      @media only screen and (max-device-width: 991px) {
+        .main_head .info-group .wpcf7-form-control-wrap {
+          width: 48%;
+          margin-right: 4%; } }
+      @media only screen and (max-device-width: 767px) {
+        .main_head .info-group .wpcf7-form-control-wrap {
+          width: 100%;
+          margin-right: 0; } }
+      .main_head .info-group .wpcf7-form-control-wrap:nth-child(3) {
+        margin-right: 0; }
+      .main_head .info-group .wpcf7-form-control-wrap input {
+        width: 100%; }
+  .main_head .info-group-comment {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px; }
+    .main_head .info-group-comment textarea {
+      width: 100%; }
+      @media only screen and (max-device-width: 991px) {
+        .main_head .info-group-comment textarea {
+          height: 150px; } }
+  .main_head div.wpcf7-validation-errors, .main_head div.wpcf7-acceptance-missing {
+    border: 2px solid #347ffb;
+    -webkit-border-radius: 30px;
+            border-radius: 30px; }
+  .main_head span.wpcf7-not-valid-tip {
+    font-size: 12px; }
 
 /* 5.  Why-us */
 .why-us {
@@ -748,8 +830,7 @@ header {
     .why-us .item-box .box-wrapper:hover {
       -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
               box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-      margin-top: -5px;
-      border-bottom: 2px solid #212121; }
+      margin-top: -5px; }
     .why-us .item-box .box-wrapper .icon-box {
       margin-bottom: 40px; }
       .why-us .item-box .box-wrapper .icon-box i {
@@ -865,6 +946,25 @@ header {
           font-size: 18px; } }
 
 /* 8. Footer */
+.static-content {
+  padding-bottom: 0; }
+  .static-content .text-box {
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -270px;
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+    padding: 80px 60px; }
+    .static-content .text-box h1 {
+      color: #1d1f2e; }
+    .static-content .text-box p {
+      font-family: "Open-Sans-Light", sans-serif, Arial;
+      color: #1d1f2e;
+      line-height: 30px;
+      font-size: 15px; }
+
+/* 9. Footer */
 footer {
   padding: 30px 0 15px 0;
   background-color: #212121;

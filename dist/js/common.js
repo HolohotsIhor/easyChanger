@@ -1,9 +1,11 @@
 $(document).ready(function() {
     "use strict";
+
     /* Burger */
     $(".toggle_mnu").click(function() {
         $(".sandwich").toggleClass("active");
     });
+
     /* Burger. Hover */
     $(".top_mnu ul a").click(function() {
         $(".top_mnu").fadeOut(600);
@@ -34,4 +36,5 @@ $(document).ready(function() {
         delay: 10,
         time: 1000
     });
+    
 });
