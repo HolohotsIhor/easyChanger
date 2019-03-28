@@ -785,7 +785,8 @@ header {
       @media only screen and (max-device-width: 991px) {
         .main_head .info-group-comment textarea {
           height: 150px; } }
-  .main_head div.wpcf7-validation-errors, .main_head div.wpcf7-acceptance-missing {
+  .main_head div.wpcf7-validation-errors,
+  .main_head div.wpcf7-acceptance-missing {
     border: 2px solid #347ffb;
     -webkit-border-radius: 30px;
             border-radius: 30px; }
@@ -945,9 +946,10 @@ header {
         .counter .counter-box .text-box .event {
           font-size: 18px; } }
 
-/* 8. Footer */
+/* 8. Static content */
 .static-content {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  /* Comments */ }
   .static-content .text-box {
     background-color: #fff;
     -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
@@ -956,13 +958,93 @@ header {
     -webkit-border-radius: 5px 5px 0 0;
             border-radius: 5px 5px 0 0;
     padding: 80px 60px; }
+    @media only screen and (max-device-width: 991px) {
+      .static-content .text-box {
+        margin-top: -150px;
+        padding: 30px 10px; } }
+    @media only screen and (max-device-width: 320px) {
+      .static-content .text-box {
+        margin-top: -215px; } }
     .static-content .text-box h1 {
-      color: #1d1f2e; }
-    .static-content .text-box p {
+      color: #1d1f2e;
+      font-family: "Open-Sans-Regular", sans-serif, Arial; }
+    .static-content .text-box h2 {
+      color: #1d1f2e;
+      font-size: 26px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+      font-family: "Open-Sans-Regular", sans-serif, Arial; }
+      @media only screen and (max-device-width: 991px) {
+        .static-content .text-box h2 {
+          margin-top: 10px; } }
+    .static-content .text-box p,
+    .static-content .text-box li {
       font-family: "Open-Sans-Light", sans-serif, Arial;
       color: #1d1f2e;
       line-height: 30px;
-      font-size: 15px; }
+      font-size: 15px;
+      margin-bottom: 0; }
+      @media only screen and (max-device-width: 991px) {
+        .static-content .text-box p,
+        .static-content .text-box li {
+          margin-bottom: 15px; } }
+    .static-content .text-box p {
+      margin-bottom: 10px; }
+  .static-content .comment-box .comment-box-wrapper {
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+    padding: 80px 60px;
+    margin-top: 20px; }
+    @media only screen and (max-device-width: 991px) {
+      .static-content .comment-box .comment-box-wrapper {
+        padding: 30px 10px;
+        margin-top: 10px; } }
+  .static-content .comment-box:nth-child(1) .comment-box-wrapper,
+  .static-content .comment-box:nth-child(2) .comment-box-wrapper {
+    background-color: #fff;
+    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -270px;
+    -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+    padding: 80px 60px; }
+    @media only screen and (max-device-width: 991px) {
+      .static-content .comment-box:nth-child(1) .comment-box-wrapper,
+      .static-content .comment-box:nth-child(2) .comment-box-wrapper {
+        margin-top: -150px;
+        padding: 30px 10px; } }
+    @media only screen and (max-device-width: 320px) {
+      .static-content .comment-box:nth-child(1) .comment-box-wrapper,
+      .static-content .comment-box:nth-child(2) .comment-box-wrapper {
+        margin-top: -215px; } }
+  @media only screen and (max-device-width: 991px) {
+    .static-content .comment-box:nth-child(2) .comment-box-wrapper {
+      margin-top: 10px; } }
+  .static-content .text-box {
+    background-color: #fff; }
+  .static-content .comment-box .photo-box {
+    margin-bottom: 50px; }
+    @media only screen and (max-device-width: 991px) {
+      .static-content .comment-box .photo-box {
+        margin-bottom: 20px; } }
+    .static-content .comment-box .photo-box img {
+      margin-right: 10px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+    .static-content .comment-box .photo-box span {
+      font-family: "Open-Sans-Bold", sans-serif, Arial; }
+  .static-content .comment-box .text-box-comment {
+    line-height: 36px;
+    margin-bottom: 90px; }
+    @media only screen and (max-device-width: 991px) {
+      .static-content .comment-box .text-box-comment {
+        margin-bottom: 40px; } }
+  .static-content .comment-box .date-box {
+    font-style: italic;
+    font-size: 14px; }
 
 /* 9. Footer */
 footer {

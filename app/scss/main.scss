@@ -880,7 +880,7 @@ header {
             &:active,
             &:focus {
                 outline: none;
-                border-bottom: solid 2px $blue;   
+                border-bottom: solid 2px $blue;
             }
         }
     }
@@ -993,7 +993,8 @@ header {
     .info-group {
         float: left;
         width: 100%;
-        br{
+
+        br {
             display: none;
         }
 
@@ -1017,18 +1018,18 @@ header {
                 margin-right: 0;
             }
 
-            input{
+            input {
                 width: 100%;
             }
         }
     }
 
-    .info-group-comment{
+    .info-group-comment {
         width: 100%;
         float: left;
         margin-bottom: 30px;
 
-        textarea{
+        textarea {
             width: 100%;
 
             @media only screen and (max-device-width: 991px) {
@@ -1037,12 +1038,13 @@ header {
         }
     }
 
-    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
         border: 2px solid $blue;
         border-radius: 30px;
     }
 
-    span.wpcf7-not-valid-tip{
+    span.wpcf7-not-valid-tip {
         font-size: 12px;
     }
 }
@@ -1263,26 +1265,137 @@ header {
     }
 }
 
-/* 8. Footer */
-.static-content{
+/* 8. Static content */
+.static-content {
     padding-bottom: 0;
 
-    .text-box{
+    .text-box {
         background-color: $white;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
         margin-top: -270px;
         border-radius: 5px 5px 0 0;
         padding: 80px 60px;
 
-        h1{
-            color: #1d1f2e;
+        @media only screen and (max-device-width: 991px) {
+            margin-top: -150px;
+            padding: 30px 10px;
         }
 
-        p{
-            font-family: "Open-Sans-Light", sans-serif, Arial;
+        @media only screen and (max-device-width: 320px) {
+            margin-top: -215px;
+        }
+
+        h1 {
             color: #1d1f2e;
-            line-height: 30px;
-            font-size: 15px;
+            font-family: "Open-Sans-Regular", sans-serif, Arial;
+        }
+
+        h2 {
+            color: #1d1f2e;
+            font-size: 26px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-family: "Open-Sans-Regular", sans-serif, Arial;
+
+            @media only screen and (max-device-width: 991px) {
+               margin-top: 10px;
+           }
+       }
+
+       p,
+       li {
+        font-family: "Open-Sans-Light", sans-serif, Arial;
+        color: #1d1f2e;
+        line-height: 30px;
+        font-size: 15px;
+        margin-bottom: 0;
+
+        @media only screen and (max-device-width: 991px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    p{
+        margin-bottom: 10px;
+    }
+}
+
+.comment-box {
+
+    .comment-box-wrapper {
+        background-color: $white;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px 5px 0 0;
+        padding: 80px 60px;
+        margin-top: 20px;
+
+        @media only screen and (max-device-width: 991px) {
+            padding: 30px 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.comment-box:nth-child(1) .comment-box-wrapper,
+.comment-box:nth-child(2) .comment-box-wrapper {
+    background-color: $white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -270px;
+    border-radius: 5px 5px 0 0;
+    padding: 80px 60px;
+
+    @media only screen and (max-device-width: 991px) {
+        margin-top: -150px;
+        padding: 30px 10px;
+    }
+
+    @media only screen and (max-device-width: 320px) {
+        margin-top: -215px;
+    }
+}
+
+.comment-box:nth-child(2) .comment-box-wrapper{
+    @media only screen and (max-device-width: 991px) {
+        margin-top: 10px;
+    }
+}
+
+.text-box {
+    background-color: $white;
+}
+
+    /* Comments */
+    .comment-box {
+
+        .photo-box {
+            margin-bottom: 50px;
+
+            @media only screen and (max-device-width: 991px) {
+                margin-bottom: 20px;
+            }
+
+            img {
+                margin-right: 10px;
+                border-radius: 50%;
+            }
+
+            span {
+                font-family: "Open-Sans-Bold", sans-serif, Arial;
+            }
+        }
+
+        .text-box-comment {
+            line-height: 36px;
+            margin-bottom: 90px;
+
+            @media only screen and (max-device-width: 991px) {
+                margin-bottom: 40px;
+            }
+        }
+
+        .date-box {
+            font-style: italic;
+            font-size: 14px;
         }
     }
 }
