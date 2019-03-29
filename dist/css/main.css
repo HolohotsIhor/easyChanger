@@ -776,6 +776,14 @@ header {
         margin-right: 0; }
       .main_head .info-group .wpcf7-form-control-wrap input {
         width: 100%; }
+    .main_head .info-group .menu-557 select {
+      width: 100%; }
+    .main_head .info-group .menu-557 select::-webkit-input-placeholder {
+      font-family: "Open-Sans-Light", sans-serif, Arial;
+      font-size: 14px; }
+    .main_head .info-group .menu-557 select::-moz-placeholder {
+      font-family: "Open-Sans-Light", sans-serif, Arial;
+      font-size: 14px; }
   .main_head .info-group-comment {
     width: 100%;
     float: left;
