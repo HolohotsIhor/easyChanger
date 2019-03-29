@@ -52,6 +52,23 @@ $(document).ready(function() {
     var courseCNY = $("#CNY").text();
     var courseKZT = $("#KZT").text();
 
+    // Pay types
+    $('.menu-557 select').change(function() {
+        var payType = $('.menu-557 select option:selected').val();
+        $('.text-823 input').attr('readonly', false);
+        $('.text-823 input').val("Счет/кошелек получателя");
+
+        if(payType == "Наличные в офисе"){
+            $('.text-823 input').val("Район Алматы, ул. Макатаева, 68");
+            $('.text-823 input').attr('readonly', true);
+        }
+
+        if(payType == "Cash in the office"){
+            $('.text-823 input').val("District Almaty, st. Makatayev, 68");
+            $('.text-823 input').attr('readonly', true);
+        }
+    });
+
     // Final currency
     $('.menu-313 select').change(function() {
         var nameCurrentCurrency = $('.menu-986 select option:selected').val();
